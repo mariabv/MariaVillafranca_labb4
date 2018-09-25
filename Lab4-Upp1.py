@@ -6,4 +6,5 @@ for i in range(len(record)):
 print (record[5])
 print (len(record))
 print (len(record[5]))
+#new
 input('press enter')
