@@ -12,7 +12,7 @@ def binsok(li, x):
         else:
             return True
     return False
-def linsok(lista,elem):
+def linsok(lista,elem): #behövs egenligen inte, appendix
 	res = False
 	for ord in lista:
 		if ord == elem:
