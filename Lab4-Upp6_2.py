@@ -2,7 +2,7 @@ import time
 #import array
 def checkorder(lista):
 	log = True
-	nn=len(lista)//2
+	nn=len(lista)//2 #optimization
 	for i in range(1,nn):
 		if lista[i]>lista[i+1]:
 			log = False; break
@@ -19,14 +19,14 @@ def shuffle(lista):
 
 while True: #huvud prog | True funkar till avbrott
 	n=int(input ('How many cards are there? The number should be even:  '))
-	if n % 2 == 0: #rest från division 
+	if n % 2 == 0: #rest från division
 		break
 	else:
 		continue
 start_time = time.time()
 numbers=list(range(0,n))
 numbers=shuffle(numbers)
-sh=1
+sh=1 #initialization
 while (checkorder(numbers) == False):
 	sh+=1
 	numbers=shuffle(numbers)
