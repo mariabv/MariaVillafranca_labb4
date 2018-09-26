@@ -1,6 +1,6 @@
 import time
 def br_search(v, target):
-    """Returns True if the sorted list v contains target and False otherwise. 
+    """Returns True if the sorted list v contains target and False otherwise.
     Undefined behaviour if v is not sorted"""
     return helper(v, 0, len(v), target)
 
@@ -51,13 +51,13 @@ def linsokkup(lista,n):
 			log = False
 		if log:
 			print (lista[i],' -- ',nyord)
-inpf  = open('ordlista.txt', 'r')
+inpf  = open('ordlista.txt', 'r') #huvudprog start
 record = inpf.readlines()
 for i in range(len(record)):
 	ord = record[i].split('\n')
 	record[i]=ord[0]
-n=int(input ('For linear search press 1, for binary search press 2,\nfor binary recoursive search press 3:  '))
+n=int(input ('For linear search press 1, for binary search press 2,\nfor binary recoursive search press 3:  ')) #int gör om symboler till heltal
 start_time = time.time()
-linsokkup(record,n)
+linsokkup(record,n) #huvud-call
 print("--- %s seconds ---" % (time.time() - start_time))
 input('press enter')
